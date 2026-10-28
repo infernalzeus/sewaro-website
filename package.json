@@ -1,0 +1,1 @@
+{"name":"sewaro-website","version":"1.0.0","private":true,"description":"Static restaurant website for Sewaro in Maidstone","scripts":{"check":"node --check dist/app.js","build":"node --check dist/app.js"}}

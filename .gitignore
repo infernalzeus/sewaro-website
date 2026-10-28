@@ -1,0 +1,23 @@
+# Private local notes and source photos
+BUSINESS-NOTES.md
+PRIVATE-*.md
+.internal/
+dist/assets/[1-4]-Photo-*.jpg
+
+# Private Sites configuration and local history/package backups
+.openai/
+outputs/
+
+# Dependencies, credentials and local editor/OS state
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
