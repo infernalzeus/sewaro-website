@@ -106,3 +106,7 @@ footer { max-width: 1120px; width: 90%; margin-inline: auto; padding-block: 22px
   .story .counter-photo { order: 1; }
   .hours { margin-top: 0; }
 }
+
+.hero-art .dish { clip-path: circle(49%); }
+.menu-photo-note { color: #596057; font-size: 13px; margin: 10px 0 0; }
+.menu-item-photo[src$="chatpate.jpg"] { object-position: 50% 60%; }

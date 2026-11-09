@@ -1,8 +1,21 @@
 const dishPhotos = new Map([
-  ['Chicken Shapale', ['shapale.jpg', 'Two golden fried shapale']],
-  ['Chicken Chilli Mo:Mo', ['chilli-momo.jpg', 'Chilli mo:mo with peppers']],
-  ['Vegetable Chowmein', ['chowmein.jpg', 'Stir-fried noodles and vegetables']],
-  ['Crispy Pork Belly Thukpa', ['thukpa.jpg', 'Thukpa noodle soup with lime']],
+  ["Lamb Curry", ["lamb-curry.jpg", "Lamb curry with steamed rice"]],
+  ["Vegetable Chowmein", ["vegetable-chowmein.jpg", "Vegetable Chowmein"]],
+  ["Chatpate", ["chatpate.jpg", "Chatpate"]],
+  ["Chicken Chilli Mo:Mo", ["chilli-momo.jpg", "Chilli mo:mo"]],
+  ["Vegetable Chilli Mo:Mo", ["chilli-momo.jpg", "Chilli mo:mo"]],
+  ["Crispy Pork Belly Thukpa", ["pork-thukpa.jpg", "Crispy Pork Belly Thukpa"]],
+  ["Chicken Shapale", ["chicken-shapale.jpg", "Chicken Shapale"]],
+  ["Chicken Fried Rice", ["chicken-fried-rice.jpg", "Chicken Fried Rice"]],
+  ["Spinach & Onion Pakoda", ["pakoda.jpg", "Spinach & Onion Pakoda"]],
+  ["Chicken Mo:Mo", ["steamed-momo.jpg", "Steamed mo:mo"]],
+  ["Vegetable Mo:Mo", ["steamed-momo.jpg", "Steamed mo:mo"]],
+  ["Crispy Chicken Wings", ["wings.jpg", "Crispy Chicken Wings"]],
+  ["Alu Nimki", ["alu-nimki.jpg", "Alu Nimki"]],
+  ["Potato Twister", ["potato-twister.jpg", "Potato Twister"]],
+  ["Chicken Kothe Mo:Mo", ["kothe-momo.jpg", "Pan-fried mo:mo"]],
+  ["Vegetable Kothe Mo:Mo", ["kothe-momo.jpg", "Pan-fried mo:mo"]],
+  ["Chicken Chowmein", ["chicken-chowmein.jpg", "Chicken Chowmein"]],
 ]);
 
 function appendDishPhoto(article, name) {
@@ -12,7 +25,7 @@ function appendDishPhoto(article, name) {
   const [file, description] = photo;
   const image = document.createElement('img');
   image.className = 'menu-item-photo';
-  image.src = 'assets/' + file;
+  image.src = 'assets/dishes/' + file;
   image.alt = description;
   image.loading = 'lazy';
   image.width = 88;
