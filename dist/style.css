@@ -16,25 +16,36 @@ h1, h2 { margin-bottom: 14px; letter-spacing: -.035em; }
 h2 { font-size: clamp(32px, 3.5vw, 48px); }
 
 .hero {
-  max-width: 1220px;
-  margin-inline: auto;
+  width: min(90%, 1120px);
+  margin: 24px auto;
   min-height: 0;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
 }
-.hero-copy { padding: clamp(30px, 4.5vw, 62px) 5vw; align-self: center; }
+.hero-copy { padding: 16px 0; align-self: center; }
 .hero-copy h1 { font-size: clamp(42px, 5.3vw, 72px); }
 .intro { margin-block: 12px 0; }
 .actions { margin-top: 20px; gap: 12px 20px; flex-wrap: wrap; }
 .hero-foot { margin: 20px 0 0; }
-.hero-art { min-height: 0; padding: 30px; }
+.hero-art {
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border-radius: 12px;
+}
 .hero-art .dish {
   display: block;
-  width: min(100%, 306px);
+  width: min(100%, 270px);
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border: 0;
   transform: none;
+  box-shadow: none;
 }
-.sun { width: 88px; height: 88px; top: 18px; right: 18px; }
 .ribbon { padding-block: 12px; }
 
 .section-heading { margin-bottom: 20px; gap: 12px 30px; }
@@ -55,17 +66,20 @@ h2 { font-size: clamp(32px, 3.5vw, 48px); }
   border-radius: 8px;
 }
 .menu-group-heading h3 { margin: 0; font-size: clamp(22px, 2.6vw, 29px); }
-.menu-group-heading img {
+.hero-art .dish { clip-path: circle(46%); }
+.menu-item.has-photo {
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-content: center;
+}
+.menu-item-photo {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: center;
   display: block;
   width: clamp(56px, 7vw, 88px);
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 50%;
-}
-.hero-art .dish,
-.menu-group-heading img[src$="shapale.jpg"],
-.menu-group-heading img[src$="thukpa.jpg"] {
   clip-path: circle(46%);
 }
 .dishes { column-gap: clamp(20px, 4vw, 46px); }
@@ -85,10 +99,9 @@ footer { max-width: 1120px; width: 90%; margin-inline: auto; padding-block: 22px
 
 @media (max-width: 760px) {
   .hero, .story, .visit { grid-template-columns: minmax(0, 1fr); }
-  .hero-copy { padding-inline: 5%; }
+  .hero { gap: 12px; margin-block: 16px; }
   .hero-art { padding: 20px; }
   .hero-art .dish { width: min(66%, 240px); }
-  .sun { width: 66px; height: 66px; top: 10px; right: 10px; font-size: 9px; }
   .section-heading > p { margin-top: 8px; }
   .story .counter-photo { order: 1; }
   .hours { margin-top: 0; }
